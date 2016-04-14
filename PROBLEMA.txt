@@ -1,14 +1,11 @@
 Hola chicos,
 
-Este mail va un poco atrasado, pero es lo que nos queda para cerrar la capacitación.
-
-Les planteé que tenemos que hacer la tarea final para la aprobación del curso, para los cuales aquí les planteo los requisitos:
 
 La aplicación deberá contemplar el alta, bajas y modificaciones de los siguientes datos y sus campos:
 
-	Marcas: Nombre
-	Categorias: Nombre
-	Productos: Código único, precio, descripción, marca y categorias, imágen.
+	Marcas: Nombre (mark)
+	Categorias: Nombre (category)
+	Productos: Código único, precio, descripción, marca y categorias, imágen. (product)
 
 ITEMS:
 

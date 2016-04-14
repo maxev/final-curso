@@ -1,0 +1,38 @@
+Hola chicos,
+
+Este mail va un poco atrasado, pero es lo que nos queda para cerrar la capacitación.
+
+Les planteé que tenemos que hacer la tarea final para la aprobación del curso, para los cuales aquí les planteo los requisitos:
+
+La aplicación deberá contemplar el alta, bajas y modificaciones de los siguientes datos y sus campos:
+
+	Marcas: Nombre
+	Categorias: Nombre
+	Productos: Código único, precio, descripción, marca y categorias, imágen.
+
+ITEMS:
+
+	La aplicación deberá tener un home page listando los últimos productos agregados.
+	La aplicación deberá tener listados por marca.
+	La aplicación deberá tener listados por categoría.
+	Los usuarios deberán poder registrarse. Para eso tienen que usar devise.
+	Solo los usuarios registrados podrán agregar productos al carrito de compras.
+	El código fuente tiene que estar subido a GitHub.
+	La aplicación tiene que estar subida a Heroku
+	Es masomenos lo que vimos en las clases, no deberían tener problema con nada.
+
+La fecha de cierre de las entregas, es de 30 días a partir de hoy, digamos el 18 de Abril.
+
+También para el mejor trabajo de cada clase, vamos a estar entregando un voucher de descuento para futuros cursos, esperemos que sirva como motivación :)
+
+Cualquier duda que tengan, no dejen de mensajearme.
+
+Nos vemos,
+Carlos.
+
+
+------------------------------------------------------------------------------
+OPCIONALES:
+
+	-Comentarios a las publicaciones, opiniones sobre los articulos.
+	-ponerle AJAX para los comentarios de las publicaciones.

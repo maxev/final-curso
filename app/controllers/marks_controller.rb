@@ -1,6 +1,7 @@
 class MarksController < ApplicationController
   before_action :set_mark, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
+  before_action :authenticate_normal!, except: [:index, :show]
 
   # GET /marks
   # GET /marks.json

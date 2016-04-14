@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
-  before_action :is_normal!, only: [:show]
+  before_action :authenticate_normal!, except: [:index, :show]
 
   # GET /products
   # GET /products.json
@@ -15,10 +15,10 @@ class ProductsController < ApplicationController
   end
 
   # GET /products/new
-  def new
-    @product = Product.new
-    @marks = Mark.all
-  end
+  # def new
+  #   @product = Product.new
+  #   @marks = Mark.all
+  # end
 
   # GET /products/1/edit
   def edit

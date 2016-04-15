@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 gem 'paperclip'
 gem 'devise'
 gem 'rails_admin'
+gem 'foundation-rails'
 
 #
 

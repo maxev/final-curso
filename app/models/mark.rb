@@ -3,4 +3,6 @@ class Mark < ActiveRecord::Base
 
 	#validaciones
 	validates :name, presence: true
+
+	#scope :por_marca, -> (id) { where("mark_id: < ?", id) }
 end

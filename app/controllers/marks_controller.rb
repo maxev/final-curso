@@ -1,7 +1,7 @@
 class MarksController < ApplicationController
-  before_action :set_mark, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
-  before_action :authenticate_normal!, except: [:index, :show]
+  before_action :set_mark, only: [:show]
+  before_action :authenticate_user!, except: [:show]
+  #before_action :authenticate_normal!, except: [:index, :show]
 
   # GET /marks
   # GET /marks.json
@@ -12,55 +12,7 @@ class MarksController < ApplicationController
   # GET /marks/1
   # GET /marks/1.json
   def show
-  end
-
-  # GET /marks/new
-  def new
-    @mark = Mark.new
-  end
-
-  # GET /marks/1/edit
-  def edit
-  end
-
-  # POST /marks
-  # POST /marks.json
-  def create
-    @mark = Mark.new(mark_params)
-
-    respond_to do |format|
-      if @mark.save
-        format.html { redirect_to @mark, notice: 'Mark was successfully created.' }
-        format.json { render :show, status: :created, location: @mark }
-      else
-        format.html { render :new }
-        format.json { render json: @mark.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # PATCH/PUT /marks/1
-  # PATCH/PUT /marks/1.json
-  def update
-    respond_to do |format|
-      if @mark.update(mark_params)
-        format.html { redirect_to @mark, notice: 'Mark was successfully updated.' }
-        format.json { render :show, status: :ok, location: @mark }
-      else
-        format.html { render :edit }
-        format.json { render json: @mark.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # DELETE /marks/1
-  # DELETE /marks/1.json
-  def destroy
-    @mark.destroy
-    respond_to do |format|
-      format.html { redirect_to marks_url, notice: 'Mark was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    @products = Product.where(mark_id: params[:id]) #COMO ARMAR UN SCOPE CON ESTO
   end
 
   private

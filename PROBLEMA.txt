@@ -33,3 +33,10 @@ OPCIONALES:
 
 	-Comentarios a las publicaciones, opiniones sobre los articulos.
 	-ponerle AJAX para los comentarios de las publicaciones.
+
+-----------------
+
+commit:
+se limpio codigo
+algo de frontend instalando gem foundation-rails
+lista por marcas

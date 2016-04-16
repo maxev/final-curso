@@ -4,7 +4,7 @@
       <img class="thumbnail" src="http://placehold.it/300x400">
       <%= image_tag product.image.url(:home), class: 'thumbnail' %>
       <h5><%= link_to product.cod, product %></h5>
-      <p>$<%= product.price %></p>
+      <p><%= number_to_currency(product.price, unit: "$",separator: ",", delimiter: ".") %></p>
       <%=link_to "Buy", product, class: "button expanded" %>
     </div>
   <% end %>

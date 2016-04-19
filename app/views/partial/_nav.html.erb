@@ -3,21 +3,11 @@
 			<ul class="menu">
 				<li class="menu-text">E-commerce</li>
 				<li><%= link_to "Productos", products_path %></li>
-				<li class="has-dropdown">
-        			<a>Marcas</a>
-        			<% @marks.each do |mark| %>
-        			<ul class="dropdown">
-	          			<li><%= link_to mark.name, mark %></li>
-       				 </ul>
-       				 <% end %>
+				<li class="menu">
+					<%= link_to "Marcas", marks_path %>
       			</li>
-      			<li class="has-dropdown">
-        			<a>Categorias</a>
-        			<% @categories.each do |category| %>
-        			<ul class="dropdown">
-	          			<li><%= link_to category.name, category %></li>
-       				 </ul>
-       				 <% end %>
+      			<li class="menu">
+					<%= link_to "Categorias", categories_path %>
       			</li>
 			</ul>
 	</div>

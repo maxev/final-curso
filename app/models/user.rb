@@ -5,6 +5,4 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
 
-
-  #scope :admin, where(is_admin: :true)
 end

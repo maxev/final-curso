@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+<div class="row column text-center">
+<h1>Lista de Marcas</h1>
+
+<% @marks.each do |mark| %>
+	<ul class="menu">
+		<li><%= link_to mark.name, mark %></li>
+	</ul>
+<% end %>
+</div>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160415000336) do
+ActiveRecord::Schema.define(version: 20160419001608) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -24,8 +24,38 @@ ActiveRecord::Schema.define(version: 20160415000336) do
     t.integer "category_id", null: false
   end
 
+  create_table "line_items", force: :cascade do |t|
+    t.integer  "product_id"
+    t.integer  "quantity"
+    t.float    "unit_price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "line_items", ["product_id"], name: "index_line_items_on_product_id"
+
   create_table "marks", force: :cascade do |t|
     t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "order_items", force: :cascade do |t|
+    t.integer  "product_id"
+    t.integer  "order_id"
+    t.float    "unit_price"
+    t.integer  "quantity"
+    t.float    "total_price"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "order_items", ["order_id"], name: "index_order_items_on_order_id"
+  add_index "order_items", ["product_id"], name: "index_order_items_on_product_id"
+
+  create_table "orders", force: :cascade do |t|
+    t.float    "subtotal"
+    t.float    "total"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -41,6 +71,7 @@ ActiveRecord::Schema.define(version: 20160415000336) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.integer  "mark_id"
+    t.string   "name"
   end
 
   add_index "products", ["mark_id"], name: "index_products_on_mark_id"
